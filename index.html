@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Admin Table  </title>
+    <title>User Admin Table </title>
     <link rel="stylesheet" href="index.css">
 
 </head>
+
 <body>
     <h1>User Admin Panel</h1>
     <div class="Form- container">
-         
-         <section id="user-form">
-           
+
+        <section id="user-form">
+
             <form id="userform">
                 <label for="username">Username:</label>
-                <input type="text" id="username" required >
+                <input type="text" id="username" required>
                 <span id="usernameError" class="error-message"></span>
                 <label for="email">Email:</label>
                 <input type="text" id="useremail" required>
                 <span id="useremailError" class="error-message"></span>
                 <label for="role">Role:</label>
                 <select type="text" id="UserRole" required>
-               <option value="">Select Role</option>
-               <option value="Frontend">Frontend Developer</option>
-               <option value="backend">Backend Developer</option>
-               <option value="fullstack">Full Stack Developer</option>
-          </select>
-               <span id="roleError" class="error-message"></span> 
-               <button type="submit" id="submitBtn">Submit</button>
-               <button type="reset">clear</button>
+                    <option value="">Select Role</option>
+                    <option value="Frontend">Frontend Developer</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="fullstack">Full Stack Developer</option>
+                </select>
+                <span id="roleError" class="error-message"></span>
+                <button type="submit" id="submitBtn">Submit</button>
+                <button type="reset">clear</button>
 
             </form>
-
-
-         </section>
-        
-        
+        </section>
     </div>
-    
+    <div class="usertable- container">
+        <section id="user-table">
+            <h2>User List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>username</th>
+                        <th>useremail</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
 </body>
+
 </html>
