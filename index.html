@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,52 +9,53 @@
 </head>
 
 <body>
-    <h1>User Admin Panel</h1>
-    <div class="Form- container">
+    <h1> User Admin Planel</h1>
+   <section id="formContainer">
+    
+    <form id="form">
+        <div class="input-box">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter Your Name" >
+            <span id="fullnameError" class="error-message"></span>
 
-        <section id="user-form">
-
-            <form id="userform">
-                <label for="username">Username:</label>
-                <input type="text" id="username" required>
-                <span id="usernameError" class="error-message"></span>
-                <label for="email">Email:</label>
-                <input type="text" id="useremail" required>
-                <span id="useremailError" class="error-message"></span>
-                <label for="role">Role:</label>
-                <select type="text" id="UserRole" required>
-                    <option value="">Select Role</option>
-                    <option value="Frontend">Frontend Developer</option>
-                    <option value="backend">Backend Developer</option>
-                    <option value="fullstack">Full Stack Developer</option>
-                </select>
-                <span id="roleError" class="error-message"></span>
-                <button type="submit" id="submitBtn">Submit</button>
-                <button type="reset">clear</button>
-
-            </form>
-        </section>
-    </div>
-    <div class="usertable - container">
-        <section id="user-Table">
+        </div>
+        <div class="input-box">
+            <label>Email</label>
+            <input type="text" placeholder="Enter Your Email" >
+            <span id="fullnameError" class="error-message"></span>
+        </div>
+        <div class="input-box">
+            <label>Role</label>
+            <select id="role" name="role" required>
+                <option value="">Select Role</option>
+                <option value="Frontend Developer"> Frontend Developer</option>
+                <option value="backend Developer">backend Developer</option>
+                <option value="Full Stack Developer"> Full stack Developer</option>
+                <span id="fullnameError" class="error-message"></span>
+            </select>
+        </div>
+    </form>
+    <button type="submit" id="submitBtn">Submit</button>
+        <button type="reset" id="resetBtn">Clear</button> 
+   </section>
+    <section id="tableContainer">
+        <div class="table-con">
             <h2>User List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>username</th>
-                        <th>useremail</th>
-                        <th>Role</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="userTableBody">
-
-                </tbody>
-            </table>
-        </section>
-
-    </div>
-
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        
+        </table>
+        </div>
+    </section>
+    <script src="script.js"></script>
+                    
 </body>
 
 </html>
